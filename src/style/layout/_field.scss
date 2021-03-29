@@ -1,0 +1,33 @@
+@import "~src/style/color/color";
+
+$baseBorderRadius: 3px;
+
+@mixin field($width: 0) {
+  border-bottom: 1px solid $borderColor;
+  padding: 2px;
+  @if $width != 0 {
+    width: $width;
+  }
+}
+
+@mixin read-only {
+  color: $baseReadOnlyTextColor;
+}
+
+@mixin field-label {
+  color: $baseLabelColor;
+  margin: 2px 10px 2px 2px;
+}
+
+@mixin field-layout {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 15px;
+}
+
+@mixin list-box {
+  border: 1px solid $borderColor;
+  border-radius: $baseBorderRadius;
+  padding: 5px;
+  overflow: auto;
+}

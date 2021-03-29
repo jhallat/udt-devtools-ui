@@ -1,0 +1,14 @@
+@import '~src/style/color/color';
+@import '~src/style/layout/field';
+
+.group {
+  border: 2px solid $borderColor;
+  border-radius: $baseBorderRadius;
+  margin: 10px;
+  box-sizing: content-box;
+}
+
+.group-title {
+  color: $titleTextColor;
+  margin: 5px 5px 10px;
+}

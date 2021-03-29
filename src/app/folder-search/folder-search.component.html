@@ -1,0 +1,18 @@
+<div class="folder-search-page">
+<app-group [title]="title">
+  <div class="folder">
+    <div class="folder-label">Current Folder</div>
+    <div class="folder-field">{{ currentFolder }}</div>
+  </div>
+  <div class="folder-children-list">
+    <div class="folder-child" [ngClass]="{'folder-selected': isFolderSelected(child.name)}" (dblclick)="onOpenFolder(child.name)" (click)="onSelectFolder(child.name)" *ngFor="let child of children">
+      <div class="folder-icon"><fa-icon [icon]="['fas', 'folder']"></fa-icon></div>
+      {{ child.name }}</div>
+  </div>
+  <div class="folder">
+    <div class="folder-label">Selected Folder</div>
+    <div class="folder-field">{{ currentFolder + '/' + selectedFolder }}</div>
+    <button (click)="onClickSelect()">Select</button>
+  </div>
+</app-group>
+</div>

@@ -1,0 +1,11 @@
+$baseColor: #44dd55;
+$accentColor: #3EB9C4;
+$secondAccentColor: #B8F44B;
+$buttonColor: $accentColor;
+$buttonHoverColor: lighten($accentColor, 24%);
+$titleTextColor: lighten($baseColor, 24%);
+$titleBackgroundColor: #111111;
+$subtitleBackgroundColor: #444444;
+$baseLabelColor: lighten($baseColor, 12%);
+$borderColor: lighten($baseColor, 12%);
+$baseReadOnlyTextColor: darken($baseColor, 12%);

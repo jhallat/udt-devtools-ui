@@ -1,0 +1,62 @@
+@import '~src/style/layout/field';
+@import '~src/style/layout/clickable';
+
+.folder-search-page {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 800px;
+  box-sizing: content-box;
+}
+
+.folder-label {
+  @include field-label();
+}
+
+.folder-field {
+  @include field(350px);
+  @include read-only();
+}
+
+.folder {
+  @include field-layout;
+}
+
+.folder-children-list {
+  @include list-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.folder-child {
+  @include clickable;
+  @include mouse-down;
+  margin: 5px;
+  padding:5px;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  &:hover {
+    @include hover-border();
+    margin: 4px;
+  }
+}
+
+.folder-icon {
+  font-size: 2.5em;
+  margin-right: 2px;
+}
+
+.folder-selected {
+  @include selected-border;
+  margin: 4px;
+}
+
+button {
+  @include base-button;
+}

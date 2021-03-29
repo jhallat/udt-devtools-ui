@@ -1,0 +1,40 @@
+@import '~src/style/color/color';
+@import '~src/style/layout/field';
+@import '~src/style/layout/clickable';
+
+.app-heading {
+  font-size: 1.2em;
+  color: $titleTextColor;
+  background-color: $titleBackgroundColor;
+  padding: 10px;
+}
+
+.app-heading-root-folder {
+  display: flex;
+  flex-direction: row;
+  background-color: $subtitleBackgroundColor;
+}
+
+.root-folder {
+  @include field-layout;
+}
+
+.root-folder-left-margin {
+  margin-left: 25px;
+}
+
+.root-folder-label {
+  @include field-label;
+}
+
+.root-folder-value {
+  @include field(350px);
+  @include read-only();
+}
+
+.root-folder-icon {
+  @include clickable();
+  @include mouse-down();
+  font-size: 1.1rem;
+  padding: 6px 3px 3px 3px;
+}
