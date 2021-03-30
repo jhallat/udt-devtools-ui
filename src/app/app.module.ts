@@ -11,12 +11,14 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
 import { UiDesignComponent } from './ui-design/ui-design.component';
+import { PageDesignComponent } from './ui-design/page-design/page-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FolderSearchComponent,
-    UiDesignComponent
+    UiDesignComponent,
+    PageDesignComponent
   ],
   imports: [
     BrowserModule,

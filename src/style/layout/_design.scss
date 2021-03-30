@@ -1,0 +1,13 @@
+@import '~src/style/color/color';
+@import '~src/style/layout/field';
+
+@mixin component-label {
+  color: $secondAccentColor;
+  padding: 5px;
+}
+
+@mixin component-container {
+  border: 1px solid $secondAccentColor;
+  border-radius: $baseBorderRadius;
+  padding: 10px;
+}

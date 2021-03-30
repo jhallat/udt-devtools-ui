@@ -1,0 +1,39 @@
+@import '~src/style/layout/clickable';
+@import '~src/style/color/color';
+
+.ui-design-page {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 90%;
+}
+
+.ui-design-workspace {
+  width: 100%;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  color: $accentColor;
+  &:hover {
+    color: $buttonHoverColor;
+  }
+  justify-content: center;
+  border: 1px solid $accentColor;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px;
+}
+.tool-icon {
+  margin: auto;
+}
+
+.tool-caption {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+button {
+  @include base-button;
+}

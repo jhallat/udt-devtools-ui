@@ -9,6 +9,12 @@
   padding: 10px;
 }
 
+.app-footer{
+  background-color: $subtitleBackgroundColor;
+  min-height: 30px;
+  height:30px;
+}
+
 .app-heading-root-folder {
   display: flex;
   flex-direction: row;

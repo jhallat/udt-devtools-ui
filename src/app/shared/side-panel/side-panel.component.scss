@@ -1,0 +1,19 @@
+@import '~src/style/color/color';
+
+.side-panel {
+  display: block;
+  height: 100%
+}
+
+.side-panel-title {
+  color: $titleTextColor;
+  padding: 5px 5px 10px;
+}
+
+.right {
+  border-left: 1px solid $borderColor;
+}
+
+.left {
+  border-right: 1px solid $borderColor;
+}

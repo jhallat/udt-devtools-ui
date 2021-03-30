@@ -1,0 +1,15 @@
+@import '~src/style/layout/design';
+
+.page-design-workspace {
+  padding: 20px;
+  height: 90%;
+}
+
+.page-title {
+  @include component-label;
+}
+
+.page-component {
+  @include component-container;
+  height: 100%;
+}
