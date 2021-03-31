@@ -1,0 +1,31 @@
+@import '~src/style/layout/field';
+
+.property-panel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
+  align-items: baseline;
+}
+
+.property-label {
+  @include field-label;
+  width: 100px;
+
+}
+
+.property-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  padding: 5px;
+  &:hover {
+    background-color: #303030;
+    border-radius: $baseBorderRadius;
+  }
+}
+
+.property-value {
+  @include field(200px);
+  background-color: #222222;
+}

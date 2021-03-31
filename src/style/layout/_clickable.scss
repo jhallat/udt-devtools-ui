@@ -3,9 +3,29 @@
 
 @mixin clickable() {
   color: $buttonColor;
+  fill: $buttonColor;
+  stroke: $buttonColor;
   &:hover {
     color: $buttonHoverColor;
+    fill: $buttonHoverColor;
+    stroke: $buttonHoverColor;
     cursor: pointer;
+  }
+  &:active:hover {
+    color: darken($buttonColor, 15%);
+    fill: darken($buttonColor, 15%);
+    stroke: darken($buttonColor, 15%);
+  }
+}
+
+@mixin clickable-border() {
+  border: 1px solid $buttonColor;
+  border-radius: $baseBorderRadius;
+  &:hover {
+    border: 1px solid $buttonHoverColor;
+  }
+  &:active:hover {
+    border: 1px solid darken($buttonColor, 35%);
   }
 }
 

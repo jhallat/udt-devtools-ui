@@ -51,7 +51,7 @@ export class FolderSearchComponent implements OnInit {
   }
 
   onClickSelect(): void {
-    this.stateService.selectFolder( this.type, `${this.currentFolder}/${this.selectedFolder}`);
+    //this.stateService.selectFolder( this.type, `${this.currentFolder}/${this.selectedFolder}`);
     this.router.navigate(['/home']);
   }
 

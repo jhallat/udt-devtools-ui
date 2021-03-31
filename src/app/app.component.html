@@ -1,15 +1,7 @@
 <div class="app-heading">Universal Data Tools - Development Tools</div>
-<div class="app-heading-root-folder">
-  <div class="root-folder">
-    <div class="root-folder-label">UI Root Folder</div>
-    <div class="root-folder-value">{{rootUIFolder}}</div>
-    <div class="root-folder-icon" (click)="onSearchFolder('ui')"><fa-icon [icon]="['fas', 'folder']"></fa-icon></div>
-  </div>
-  <div class="root-folder root-folder-left-margin">
-    <div class="root-folder-label">Service Root Folder</div>
-    <div class="root-folder-value">{{rootServiceFolder}}</div>
-    <div class="root-folder-icon" (click)="onSearchFolder('service')"><fa-icon [icon]="['fas', 'folder']"></fa-icon></div>
-  </div>
+<div class="app-main-menu">
+  <button>Create</button>
+  <button [ngClass]="{'warning': warning > 0}">Configuration<ng-container *ngIf='warning > 0'>{{'(' + warning + ')'}}</ng-container></button>
 </div>
 <router-outlet></router-outlet>
 <div class="app-footer"></div>

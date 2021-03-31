@@ -15,32 +15,40 @@
   height:30px;
 }
 
-.app-heading-root-folder {
+.app-main-menu {
   display: flex;
   flex-direction: row;
   background-color: $subtitleBackgroundColor;
+  padding: 10px;
 }
 
-.root-folder {
-  @include field-layout;
+.warning {
+  color: $alertColor;
 }
 
-.root-folder-left-margin {
-  margin-left: 25px;
+button {
+  @include base-button;
 }
 
-.root-folder-label {
-  @include field-label;
-}
-
-.root-folder-value {
-  @include field(350px);
-  @include read-only();
-}
-
-.root-folder-icon {
-  @include clickable();
-  @include mouse-down();
-  font-size: 1.1rem;
-  padding: 6px 3px 3px 3px;
-}
+//.root-folder {
+//  @include field-layout;
+//}
+//
+//.root-folder-left-margin {
+//  margin-left: 25px;
+//}
+//
+//.root-folder-label {
+//  @include field-label;
+//}
+//
+//.root-folder-value {
+//  @include field(350px);
+//  @include read-only();
+//}
+//
+//.root-folder-icon {
+//  @include clickable();
+//  font-size: 1.1rem;
+//  padding: 6px 3px 3px 3px;
+//}

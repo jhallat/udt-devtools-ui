@@ -9,8 +9,7 @@ import {StateService} from './shared/state.service';
 })
 export class AppComponent implements OnInit {
   title = 'UDT Development Tools';
-  rootUIFolder = 'undefined';
-  rootServiceFolder = 'undefined';
+  warning = 0;
 
   constructor(private router: Router, private stateService: StateService) {
   }
@@ -21,18 +20,14 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.stateService.selectedFolderChanged$.subscribe({
-      next: value => {
-        if (value.type === 'ui') {
-          this.rootUIFolder = value.path;
-        }
-        if (value.type === 'service') {
-          this.rootServiceFolder = value.path;
-        }
+    this.stateService.getConfiguration$.subscribe({
+      next: configuration => {
+        this.warning = 0;
+        if (configuration.uiRootFolder === '') { this.warning++; }
+        if (configuration.serviceRootFolder === '') { this.warning++; }
+        console.log(this.warning);
       }
-      }
-
-    );
+    });
   }
 
 

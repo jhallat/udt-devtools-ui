@@ -12,13 +12,19 @@ import { HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
 import { UiDesignComponent } from './ui-design/ui-design.component';
 import { PageDesignComponent } from './ui-design/page-design/page-design.component';
+import { ToolbarComponent } from './ui-design/toolbar/toolbar.component';
+import { PropertyPanelComponent } from './ui-design/property-panel/property-panel.component';
+import { ConfiguratoinComponent } from './configuratoin/configuratoin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FolderSearchComponent,
     UiDesignComponent,
-    PageDesignComponent
+    PageDesignComponent,
+    ToolbarComponent,
+    PropertyPanelComponent,
+    ConfiguratoinComponent
   ],
   imports: [
     BrowserModule,

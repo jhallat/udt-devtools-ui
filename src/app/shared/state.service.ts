@@ -1,18 +1,30 @@
 import { Injectable } from '@angular/core';
-import {Subject} from 'rxjs';
+import {BehaviorSubject, Subject} from 'rxjs';
 import {Folder} from './group/folder';
+import {Configuration} from './models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateService {
 
-  private selectFolderChanged = new Subject<Folder>();
-  selectedFolderChanged$ = this.selectFolderChanged.asObservable();
+  private configuration: Configuration = {
+    uiRootFolder: '',
+    serviceRootFolder: ''
+  };
 
-  constructor() { }
+  private getConfiguration = new BehaviorSubject<Configuration>(this.configuration);
+  getConfiguration$ = this.getConfiguration.asObservable();
 
-  selectFolder(type: string, folder: string): void {
-    this.selectFolderChanged.next({ type, path: folder });
+  constructor() {}
+
+  setUIRootFolder(folder: string): void {
+    this.configuration = {...this.configuration, uiRootFolder: folder};
+    this.getConfiguration.next(this.configuration);
+  }
+
+  setServiceRootFolder(folder: string): void {
+    this.configuration = {...this.configuration, serviceRootFolder: folder};
+    this.getConfiguration.next(this.configuration);
   }
 }
